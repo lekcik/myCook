@@ -40,3 +40,19 @@ h2 {
 h1 {
     font-size: 3.815rem;
 }
+
+section.container {
+    background-color: var(--сlr-secondary);
+    border-radius: var(--border-radius-index);
+
+    padding: 0 var(--padding-index-medium);
+    padding-bottom: var(--padding-index-medium);
+}
+
+section.container h3,
+section.container h4,
+section.container h5,
+section.container p {
+    margin-top: var(--margin-index-small);
+    margin-bottom: var(--margin-index-small);
+}
