@@ -38,8 +38,8 @@ function Fridge() {
             <ul className="products" aria-label="list of your products">
                 {products.map((data, index) => (
                     <li key={index}>
-                        <span>{data}</span> 
                         <button onClick={() => {removeProduct(index)}}>X</button>
+                        <span>{data}</span> 
                     </li>
                 ))}
             </ul>

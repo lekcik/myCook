@@ -34,6 +34,7 @@ section.fridge form button {
     color: var(--clr-primary);
     box-sizing: border-box;
     padding: var(--padding-index-small) var(--padding-index-medium);
+    cursor: pointer;
 
     transition: all var(--transition-medium);
 }
@@ -44,3 +45,30 @@ section.fridge form button:hover {
 }
 
 /* ul */
+
+section.fridge ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-index);
+    padding-left: var(--padding-index-medium);
+}
+
+section.fridge ul li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: var(--gap-index);
+}
+
+section.fridge ul li button {
+    background-color: transparent;
+    border: 0.1rem solid var(--clr-text-primary);
+    color: var(--clr-text-primary);
+    cursor: pointer;
+
+    transition: var(--transition-medium);
+}
+
+section.fridge ul li button:hover {
+    box-shadow: 0 0 0.3rem var(--clr-text-primary);
+}
