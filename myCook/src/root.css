@@ -1,9 +1,9 @@
 :root {
-    --clr-primary: rgb(11, 17, 29);
-    --сlr-secondary: rgb(32, 44, 60);
+    --clr-primary: hsl(40, 45%, 8%);
+    --сlr-secondary: hsl(34, 30%, 18%);
 
-    --clr-text-primary: rgb(216, 220, 229);
-    --clr-text-secondary: rgb(146, 156, 174);
+    --clr-text-primary: hsl(42, 20%, 87%);
+    --clr-text-secondary: hsl(39, 15%, 63%);
 
     --padding-index-medium: 0.5rem;
     --margin-index-small: 0.5rem;
