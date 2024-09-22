@@ -1,5 +1,6 @@
 import Fridge from "./Fridge.jsx";
 import Preferences from "./Preferences.jsx";
+import Trash from "./Trash.jsx";
 
 function Input() {
 
@@ -7,6 +8,7 @@ function Input() {
         <>
             <Preferences />
             <Fridge />
+            <Trash />
         </>
     );
 }
