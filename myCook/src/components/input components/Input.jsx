@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-function Input() {
-    const [products, setProducts] = useState([]); 
+function Input({products, setProducts}) {
     const [inputValue, setInput] = useState('');
 
     function inputChangeHandler(event) {
