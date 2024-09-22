@@ -4,16 +4,23 @@ import Header from './components/header components/Header';
 import './root.css';
 import './general.css';
 
-export const ProductsContext = createContext(); 
+export const ReceiptContext = createContext(); 
 
 function App() {
-  const [products, setProducts] = useState([]); 
+  const [receipt, setReceipt] = useState({
+    products: [],
+    excludeProducts: [],
+    cuisine: '',
+    excludeCuisine: '',
+    diet: '',
+    instructionsRequired: false
+  });
 
   return (
-    <ProductsContext.Provider value={[products, setProducts]}>
+    <ReceiptContext.Provider value={[receipt, setReceipt]}>
       <Header />
       <Input />
-    </ProductsContext.Provider>
+    </ReceiptContext.Provider>
   );
 }
 

@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import { ProductsContext } from "../../App.jsx";
+import { ReceiptContext } from "../../App.jsx";
 import './fridge.css'; 
 
 function Fridge() {
-    const [products, setProducts] = useContext(ProductsContext);
+    const [receipt, setReceipt] = useContext(ReceiptContext);
     const [inputValue, setInput] = useState('');
 
     function inputChangeHandler(event) {
@@ -13,14 +13,19 @@ function Fridge() {
     function addProduct(event) {
         event.preventDefault();
         if (inputValue !== '') {
-            setProducts((p) => [...p, inputValue]);
+            setReceipt((prevReceipt) => ({
+                ...prevReceipt,
+                products: [...prevReceipt.products, inputValue]
+            }));
             setInput('');
         }
     }
 
     function removeProduct(index) {
-        let temp = products.filter((_, i) => i !== index);
-        setProducts(temp);
+        setReceipt((prevReceipt) => ({
+            ...prevReceipt,
+            products: prevReceipt.products.filter((_, i) => i !== index)
+        }));
     }
 
     return (
@@ -36,7 +41,7 @@ function Fridge() {
             </form>
 
             <ul className="products" aria-label="list of your products">
-                {products.map((data, index) => (
+                {receipt.products.map((data, index) => (
                     <li key={index}>
                         <button onClick={() => {removeProduct(index)}}>X</button>
                         <span>{data}</span> 
