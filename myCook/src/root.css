@@ -1,0 +1,19 @@
+:root {
+    --clr-primary: rgb(11, 17, 29);
+    --сlr-secondary: rgb(32, 44, 60);
+
+    --clr-text-primary: rgb(216, 220, 229);
+    --clr-text-secondary: rgb(146, 156, 174);
+
+    --padding-index-medium: 0.5rem;
+    --margin-index-small: 0.5rem;
+    --margin-index-medium: 1rem;
+    --gap-index: calc(0.3rem + 1vh);
+
+    --border-radius-index: 0.8rem;
+
+    --text-index: 1rem;
+
+    --transition-fast: 0.15s;
+    --transition-medium: 0.3s;
+}

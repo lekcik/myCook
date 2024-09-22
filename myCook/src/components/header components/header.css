@@ -1,0 +1,30 @@
+form.searchBar {
+    background-color: var(--сlr-secondary);
+    padding: var(--padding-index-medium);
+    border-radius: var(--border-radius-index);
+    transition: all var(--transition-medium);
+}
+
+form input {
+    background-color: transparent;
+    border: none;
+    color: var(--clr-text-primary);
+    min-width: 100%;
+    box-sizing: border-box;
+    padding-left: calc(0.5rem + 0.1vw);
+}
+
+form input::placeholder {
+    color: var(--clr-text-primary);
+    opacity: 0.9;
+}
+
+form input:focus {
+    border: none;
+    outline: none;
+}
+
+form:has(input:focus) {
+    box-shadow: 0 0.2rem 0.5rem var(--сlr-secondary);
+    transform: translateY(-0.2rem);
+}

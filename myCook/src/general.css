@@ -1,0 +1,42 @@
+html {
+    background-color: var(--clr-primary);
+    font-family: "Roboto", sans-serif;
+    color: var(--clr-text-primary);
+    font-size: var(--text-index);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-index);
+    
+    padding: calc(0.5rem + 2vh) calc(0.3rem + 1vw);
+}
+
+p {
+    color: var(--clr-text-secondary);
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1.563rem;
+}
+
+h4 {
+    font-size: 1.953rem;
+}
+
+h3 {
+    font-size: 2.441rem;
+}
+
+h2 {
+    font-size: 3.052rem;
+}
+
+h1 {
+    font-size: 3.815rem;
+}

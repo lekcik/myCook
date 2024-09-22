@@ -1,14 +1,15 @@
-import Input from './Input.jsx';
-import Button from './Button.jsx';
-import { useState } from 'react';
+import Input from './components/input components/Input';
+import Header from './components/header components/Header';
+import './root.css';
+import './general.css';
 
 function App() {
-  const [inputValue, setInputValue] = useState('');
+
 
   return (
     <>
-      <Input inputValue={inputValue} setInputValue={setInputValue} />
-      <Button inputValue={inputValue} />
+      <Header />
+      <Input />
     </>
   );
 }
