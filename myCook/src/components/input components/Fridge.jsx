@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { ReceiptContext } from "../../App.jsx";
-import './fridge.css'; 
 
 function Fridge() {
     const [receipt, setReceipt] = useContext(ReceiptContext);
@@ -29,7 +28,7 @@ function Fridge() {
     }
 
     return (
-        <section className="fridge container" aria-label="Details about your products">
+        <section className="fridge products container" aria-label="Details about your products">
             <h2>What's in your fridge today?</h2>
             <form onSubmit={addProduct}>
                 <input 

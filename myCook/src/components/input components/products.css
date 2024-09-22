@@ -1,6 +1,6 @@
 /* form */
 
-section.fridge form {
+section.products form {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,7 +8,7 @@ section.fridge form {
     gap: var(--gap-index);
 }
 
-section.fridge form input {
+section.products form input {
     flex: 1;
 
     background-color: var(--clr-primary);
@@ -18,17 +18,17 @@ section.fridge form input {
     padding: var(--padding-index-small) var(--padding-index-medium);
 }
 
-section.fridge form input::placeholder {
+section.products form input::placeholder {
     color: var(--clr-text-primary);
     opacity: 0.9;
 }
 
-section.fridge form input:focus {
+section.products form input:focus {
     border: none;
     outline: none;
 }
 
-section.fridge form button {
+section.products form button {
     background-color: var(--clr-text-primary);
     border: 0.1rem solid var(--clr-text-primary);
     color: var(--clr-primary);
@@ -39,28 +39,28 @@ section.fridge form button {
     transition: all var(--transition-medium);
 }
 
-section.fridge form button:hover {
+section.products form button:hover {
     background-color: var(--clr-primary);
     color: var(--clr-text-primary);
 }
 
 /* ul */
 
-section.fridge ul {
+section.products ul {
     display: flex;
     flex-direction: column;
     gap: var(--gap-index);
     padding-left: var(--padding-index-medium);
 }
 
-section.fridge ul li {
+section.products ul li {
     display: flex;
     align-items: center;
     justify-content: left;
     gap: var(--gap-index);
 }
 
-section.fridge ul li button {
+section.products ul li button {
     background-color: transparent;
     border: 0.1rem solid var(--clr-text-primary);
     color: var(--clr-text-primary);
@@ -69,6 +69,6 @@ section.fridge ul li button {
     transition: var(--transition-medium);
 }
 
-section.fridge ul li button:hover {
+section.products ul li button:hover {
     box-shadow: 0 0 0.3rem var(--clr-text-primary);
 }

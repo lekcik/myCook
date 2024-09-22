@@ -6,7 +6,7 @@ function Trash() {
     const [inputValue, setInput] = useState('');
 
     function inputChangeHandler(event) {
-        setInput(() => {event.target.value});
+        setInput(() => event.target.value);
     }
 
     function addProduct(event) {
@@ -14,14 +14,14 @@ function Trash() {
         if (inputValue !== '') {
             setReceipt((prevReceipt) => ({
                 ...prevReceipt,
-                excludeProducts: [...prevExcludeProducts.products, inputValue]
+                excludeProducts: [...prevReceipt.excludeProducts, inputValue]
             }));
             setInput('');
         }
     }
 
     return(
-        <section className="trash container">
+        <section className="trash products container">
             <h2>What would you like NOT to eat?</h2>
             <form onSubmit={addProduct}>
                 <input 
