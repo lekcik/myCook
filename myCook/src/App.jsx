@@ -1,17 +1,19 @@
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import Input from './components/input components/Input';
 import Header from './components/header components/Header';
 import './root.css';
 import './general.css';
 
+export const ProductsContext = createContext(); 
+
 function App() {
   const [products, setProducts] = useState([]); 
 
   return (
-    <>
+    <ProductsContext.Provider value={[products, setProducts]}>
       <Header />
-      <Input products={products} setProducts={setProducts}/>
-    </>
+      <Input />
+    </ProductsContext.Provider>
   );
 }
 

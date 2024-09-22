@@ -5,7 +5,7 @@ form.searchBar {
     transition: all var(--transition-medium);
 }
 
-form input {
+form.searchBar input {
     background-color: transparent;
     border: none;
     color: var(--clr-text-primary);
@@ -14,17 +14,17 @@ form input {
     padding-left: calc(0.5rem + 0.1vw);
 }
 
-form input::placeholder {
+form.searchBar input::placeholder {
     color: var(--clr-text-primary);
     opacity: 0.9;
 }
 
-form input:focus {
+form.searchBar input:focus {
     border: none;
     outline: none;
 }
 
-form:has(input:focus) {
+form.searchBar:has(input:focus) {
     box-shadow: 0 0.2rem 0.5rem var(--сlr-secondary);
     transform: translateY(-0.2rem);
 }

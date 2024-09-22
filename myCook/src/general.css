@@ -49,9 +49,14 @@ section.container {
     padding-bottom: var(--padding-index-medium);
 }
 
+section.container h2,
 section.container h3,
 section.container h4,
-section.container h5,
+section.container h5 {
+    margin-top: var(--margin-index-small);
+    margin-bottom: var(--margin-index-big);
+}
+
 section.container p {
     margin-top: var(--margin-index-small);
     margin-bottom: var(--margin-index-small);

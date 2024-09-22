@@ -1,0 +1,46 @@
+/* form */
+
+section.fridge form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--gap-index);
+}
+
+section.fridge form input {
+    flex: 1;
+
+    background-color: var(--clr-primary);
+    border: 0.1rem solid var(--clr-primary);
+    color: var(--clr-text-primary);
+    box-sizing: border-box;
+    padding: var(--padding-index-small) var(--padding-index-medium);
+}
+
+section.fridge form input::placeholder {
+    color: var(--clr-text-primary);
+    opacity: 0.9;
+}
+
+section.fridge form input:focus {
+    border: none;
+    outline: none;
+}
+
+section.fridge form button {
+    background-color: var(--clr-text-primary);
+    border: 0.1rem solid var(--clr-text-primary);
+    color: var(--clr-primary);
+    box-sizing: border-box;
+    padding: var(--padding-index-small) var(--padding-index-medium);
+
+    transition: all var(--transition-medium);
+}
+
+section.fridge form button:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-text-primary);
+}
+
+/* ul */

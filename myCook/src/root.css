@@ -5,9 +5,11 @@
     --clr-text-primary: hsl(42, 20%, 8%);
     --clr-text-secondary: hsl(39, 15%, 18%);
 
+    --padding-index-small: 0.25rem;
     --padding-index-medium: 0.5rem;
     --margin-index-small: 0.5rem;
     --margin-index-medium: 1rem;
+    --margin-index-big: 1.5rem;
     --gap-index: calc(0.3rem + 1vh);
 
     --border-radius-index: 0.8rem;
