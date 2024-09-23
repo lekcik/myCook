@@ -19,13 +19,26 @@ function Preferences() {
             <h2>Preferences</h2>
 
             <form aria-label="your receipt preferences">
-                <select value={receipt.cuisine} onChange={cuisineChangeHandler} name="cuisines" id="cuisines">
-                    {
-                        cuisines.current.map((data, index) => (
-                            <option value={data} key={index}>{data}</option>
-                        ))
-                    }
-                </select>
+                <div>
+                    <h3>Cuisine</h3>
+                    <select value={receipt.cuisine} onChange={cuisineChangeHandler} name="cuisines" id="cuisines">
+                        <option value={''} key={0}>No preference</option>
+                        {
+                            cuisines.current.map((data, index) => (
+                                <option value={data} key={index+1}>{data}</option>
+                            ))
+                        }
+                    </select>
+                </div>
+                
+                <div>
+                    <h3>Diet</h3>
+                    <select name="diets" id="diets">
+                        {
+
+                        }
+                    </select>
+                </div>
             </form>
         </section>
     );
