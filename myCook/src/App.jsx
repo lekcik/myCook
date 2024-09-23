@@ -15,7 +15,6 @@ function App() {
           products: [],
           excludeProducts: [],
           cuisine: '',
-          excludeCuisine: '',
           diet: '',
           instructionsRequired: false
         };
