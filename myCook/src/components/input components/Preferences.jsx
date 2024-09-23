@@ -1,7 +1,15 @@
+import { useState, useContext } from "react";
 
 function Preferences() {
+
     return(
-        <p>halo</p>
+        <section className="preferences container">
+            <h2>Preferences</h2>
+
+            <form aria-label="your receipt preferences">
+                
+            </form>
+        </section>
     );
 }
 
