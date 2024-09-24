@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext } from 'react';
 import Input from './components/input components/Input';
 import Header from './components/header components/Header';
+import Output from './components/output components/Output';
 import './root.css';
 import './general.css';
 
@@ -28,6 +29,7 @@ function App() {
     <ReceiptContext.Provider value={[receipt, setReceipt]}>
       <Header />
       <Input />
+      <Output />
     </ReceiptContext.Provider>
   );
 }

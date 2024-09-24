@@ -2,7 +2,6 @@ section.preferences form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     justify-content: center;
-    gap: var(--gap-index);
 }
 
 section.preferences form div {
