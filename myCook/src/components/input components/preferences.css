@@ -1,0 +1,21 @@
+section.preferences form {
+    
+}
+
+section.preferences select {
+    background-color: var(--clr-primary);
+    border: 0.1rem solid var(--clr-primary);
+    color: var(--clr-text-primary);
+    box-sizing: border-box;
+    padding: var(--padding-index-small) var(--padding-index-medium);
+}
+
+section.preferences select::placeholder {
+    color: var(--clr-text-primary);
+    opacity: 0.9;
+}
+
+section.preferences select:focus {
+    border: none;
+    outline: none;
+}
