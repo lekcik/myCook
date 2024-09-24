@@ -10,39 +10,22 @@ function Preferences() {
         'Gluten Free', 'Ketogenic', 'Vegetarian', 'Lacto-Vegetarian', 'Ovo-Vegetarian', 'Vegan', 'Pescetarian', 'Paleo', 'Primal', 'Low FODMAP', 'Whole30'
     ]);
 
-    function cuisineChangeHandler(event) {
+    function changeHadler(event) {
+        const prop = event.target.name;
         setReceipt((prevReceipt) => ({
             ...prevReceipt,
-            cuisine: event.target.value
+            [prop]: event.target.value 
         }));
-    }
-
-    function dietChangeHandler(event) {
-        setReceipt((prevReceipt) => ({
-            ...prevReceipt,
-            diet: event.target.value
-        }))
-    }
-
-    function instructionsChangeHandler(event) {
-        setReceipt((prevReceipt) => ({
-            ...prevReceipt,
-            instructionsRequired: event.target.value
-        }))
-    }
-
-    function test(event) {
-        console.log(event.target.id);
     }
 
     return(
         <section className="preferences container">
             <h2>Preferences</h2>
 
-            <form onChange={test} aria-label="your receipt preferences">
+            <form aria-label="your receipt preferences">
                 <div>
                     <h3>Cuisine</h3>
-                    <select value={receipt.cuisine} onChange={cuisineChangeHandler} name="cuisines" id="cuisines">
+                    <select value={receipt.cuisine} name="cuisine" id="cuisine" onChange={changeHadler}>
                         <option value={''} key={0}>No preference</option>
                         {
                             cuisines.current.map((data, index) => (
@@ -54,7 +37,7 @@ function Preferences() {
                 
                 <div>
                     <h3>Diet</h3>
-                    <select value={receipt.diet} onChange={dietChangeHandler} name="diets" id="diets">
+                    <select value={receipt.diet} name="diet" id="diet" onChange={changeHadler}>
                         <option value={''} key={0}>No preference</option>
                         {
                             diets.current.map((data, index) => (
@@ -66,7 +49,7 @@ function Preferences() {
 
                 <div>
                     <h3>Instructions required?</h3>
-                    <select value={receipt.instructionsRequired} onChange={instructionsChangeHandler} name="instructions" id="instructions">
+                    <select value={receipt.instructionsRequired} name="instructionsRequired" id="instructionsRequired" onChange={changeHadler}>
                         <option value={false}>No</option>
                         <option value={true}>Yes</option>
                     </select>
