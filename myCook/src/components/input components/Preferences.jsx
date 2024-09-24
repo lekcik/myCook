@@ -48,10 +48,10 @@ function Preferences() {
                 </div>
 
                 <div>
-                    <h3>Instructions required?</h3>
+                    <h3>Instructions</h3>
                     <select value={receipt.instructionsRequired} name="instructionsRequired" id="instructionsRequired" onChange={changeHadler}>
-                        <option value={false}>No</option>
-                        <option value={true}>Yes</option>
+                        <option value={false}>Not required</option>
+                        <option value={true}>Required</option>
                     </select>
                 </div>
             </form>
