@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getData } from "../getData";
 import './header.css';
 
 function Header() {
@@ -8,9 +9,16 @@ function Header() {
         setInput(event.target.value);
     }
 
+    async function searchHandler(event) {
+        event.preventDefault();
+        
+        const data = await getData(inputValue);
+        console.log(data);
+    }
+
     return(
-        <form className="searchBar" aria-label="Search recipies">
-            <input onChange={(e) => {inputChangeHandler(e)}} placeholder="Search for recipies..." />
+        <form onSubmit={searchHandler} className="searchBar" aria-label="Search recipies">
+            <input onChange={(e) => {inputChangeHandler(e)}} placeholder="Quick search for recipies..." />
         </form>
     );
 }
