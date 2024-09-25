@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getData } from "../getData";
+import { getData, getRecipe } from "../getData";
 import './header.css';
 
 function Header() {
@@ -14,6 +14,8 @@ function Header() {
         
         const data = await getData(inputValue);
         console.log(data);
+
+        console.log(await getRecipe(642583));
     }
 
     return(
