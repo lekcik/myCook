@@ -35,7 +35,7 @@ function Header() {
             </form>
 
             {
-                headSearch && data ? <HeadSearch data={data}/> : null
+                headSearch && data ? <HeadSearch data={data} headSearchShow={headSearchShow}/> : null
             }
         </>
     );
