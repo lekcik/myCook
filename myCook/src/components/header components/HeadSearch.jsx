@@ -2,6 +2,10 @@ import { useEffect } from "react";
 
 function HeadSearch(props) {
 
+    useEffect(() => {
+        console.log(props.data)
+    }, [])
+
     function closeHandler() {
         props.headSearchShow(false);
     }
@@ -15,8 +19,13 @@ function HeadSearch(props) {
                     {
                         props.data.results.map((data, index) => (
                             <li key={index}>
-                               <p>{data.title}</p>
-                                <img src={data.image} alt="beautiful photo" />
+                                <details>
+                                    <summary>
+                                        <p>{data.title}</p>
+                                        <img src={data.image} alt="beautiful photo" />
+                                    </summary>
+                                    {data.summary}
+                                </details>
                             </li>
                         ))
                     }

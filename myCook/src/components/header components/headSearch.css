@@ -40,3 +40,10 @@ section.headSearch img {
     width: 10rem;
     object-fit: contain;
 }
+
+section.headSearch ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-index);
+}
