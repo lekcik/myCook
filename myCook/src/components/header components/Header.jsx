@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { getData, getRecipe } from "../getData";
-import './header.css';
 import HeadSearch from "./HeadSearch.jsx";
+import './header.css';
+import './headSearch.css';
 
 function Header() {
     const [inputValue, setInput] = useState('');
