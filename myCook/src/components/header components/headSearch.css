@@ -13,7 +13,6 @@ section.blur {
 
 section.headSearch {
     position: relative;
-    background-color: white;
     width: 70vw;
     height: 80vh;
     overflow-y: auto;
@@ -34,4 +33,10 @@ button.close-btn {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+section.headSearch img {
+    height: 5rem;
+    width: 10rem;
+    object-fit: contain;
 }

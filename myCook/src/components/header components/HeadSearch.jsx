@@ -8,7 +8,7 @@ function HeadSearch(props) {
 
     return(
         <section className="blur" aria-label="search results">
-            <section className="headSearch" aria-label="search results">
+            <section className="headSearch container" aria-label="search results">
                 <button className="close-btn" onClick={closeHandler}>X</button>
                 <h2>Search results</h2>
                 <ul>
