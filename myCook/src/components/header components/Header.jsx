@@ -4,8 +4,9 @@ import './header.css';
 import HeadSearch from "./HeadSearch.jsx";
 
 function Header() {
-    let [inputValue, setInput] = useState('');
-    let [toggler, toggle] = useState(false);
+    const [inputValue, setInput] = useState('');
+    const [headSearch, headSearchShow] = useState(false);
+    const [data, setData] = useState(null);
 
     function inputChangeHandler(event) {
         setInput(event.target.value);
@@ -14,30 +15,28 @@ function Header() {
     async function searchHandler(event) {
         event.preventDefault();
         
-        const data = await getData(inputValue);
-        console.log(data);
+        const fetchedData = await getData(inputValue); 
+        setData(fetchedData); 
+        console.log(fetchedData);
 
         console.log(await getRecipe(642583));
 
-        await toggleHandler();
+        await headSearchGoHandler();
     }
 
-    async function toggleHandler() {
-        // if (toggler === false) {
-        //     toggle(true);
-        // }
-        // else {
-        //     toggle(false);
-        // }
+    function headSearchGoHandler() {
+        headSearchShow(true);
     }
 
     return (
         <>
             <form onSubmit={searchHandler} className="searchBar" aria-label="Search recipes">
-                <input onChange={(e) => {inputChangeHandler(e)}} placeholder="Quick search for recipes..." />
+                <input onChange={inputChangeHandler} placeholder="Quick search for recipes..." />
             </form>
 
-            <HeadSearch />
+            {
+                headSearch && data ? <HeadSearch data={data}/> : null
+            }
         </>
     );
 }
